@@ -1,12 +1,13 @@
 import user from './user.json'
+import friends from "./FriendsList/friends.json";
+import data from './statistics/data'
 // import { UserCard } from './userCard/userCard';
 import { Profile } from './userCard/userCard';
 import { Statistics } from './statistics/statistic';
-import data from './statistics/data'
-import { StatList } from './statistics/statList';
+import { FriendList } from './FriendsList/FriendList';
 // export const user = JSON.parse(JSON.stringify(userData))
 // const stats = staistics;
-// console.log('staistics',  stats)
+console.log('friends',  friends)
 export const App = () => {
   return (
     <div
@@ -27,6 +28,8 @@ export const App = () => {
   stats={user.stats}
 />
       <Statistics title="Upload stats" stats={data} />
+
+      <FriendList data={friends} />
 
     </div>
   );
