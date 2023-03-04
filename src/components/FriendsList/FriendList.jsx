@@ -1,6 +1,5 @@
 import FriendListItem from "./FriendListItem"
 export const FriendList = (props) => {
-    console.log('FriendList', props)
     return <ul className="friend-list">
         {props.data.map(prop => 
         (<FriendListItem

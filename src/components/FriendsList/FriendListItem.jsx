@@ -1,5 +1,4 @@
  const FriendListItem = (props) => {
-    console.log('FriendListItem', props)
   return (
     <li className="item">
       <span className="status">{props.onStatus}</span>
