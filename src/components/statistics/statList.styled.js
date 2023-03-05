@@ -9,6 +9,7 @@ align-items: center;
 export const StyledStatList = styled.ul`
 display: flex;
 width: 100%;
+padding: 0;
 
 li{
     display: flex;

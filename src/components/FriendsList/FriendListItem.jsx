@@ -1,10 +1,11 @@
- const FriendListItem = (props) => {
+import { StyledFriendListItem } from "./StyledFriendList"; 
+const FriendListItem = (props) => {
   return (
-    <li className="item">
+    <StyledFriendListItem className="item"{...props}>
       <span className="status">{props.onStatus}</span>
       <img className="avatar" src={props.avatar} alt="User avatar" width="48" />
       <p className="name">{props.friendName}</p>
-    </li>
+    </StyledFriendListItem>
   );
 };
 export default FriendListItem;
