@@ -6,7 +6,7 @@ export const FriendList = (props) => {
         {props.data.map(prop => 
         (<FriendListItem
             key={prop.id}
-            onStatus={prop.isOnline}
+            isOnline={prop.isOnline}
             avatar={prop.avatar}
             friendName={prop.name}
         />)

@@ -23,7 +23,7 @@ export const StyledFriendListItem = styled.li`
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: ${props => (props.onStatus ? 'green' : 'red')};
+    background-color: ${props => (props.isOnline ? 'green' : 'red')};
   
   }
 `;

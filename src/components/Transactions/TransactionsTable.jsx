@@ -1,10 +1,10 @@
 
 import { TransactionItem } from "./TransactionItem";
-
+import {StyledTransactionTable} from './Transactions.styled'
 export const TransactionsTable = (props) => {
   console.log('Table', props)
   return (
-    <table className="transaction-history">
+    <StyledTransactionTable className="transaction-history">
       <thead>
         <tr>
           <th>Type</th>
@@ -16,6 +16,6 @@ export const TransactionsTable = (props) => {
       <tbody>
         <TransactionItem props={props} />
       </tbody>
-    </table>
+    </StyledTransactionTable>
   );
 };
