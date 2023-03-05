@@ -1,27 +1,29 @@
 
+import {StyledProfile, StyledList} from './userCard.styled'
+
 export const Profile = props => {
   return (
-    <div className="profile">
+    <StyledProfile className="profile">
       <div className="description">
         <img src={props.avatar} alt={props.username} className="avatar" />
         <p className="name">{props.username}</p>
         <p className="tag">{props.tag}</p>
         <p className="location">{props.location}</p>
       </div>
-      <ul className="stats">
+      <StyledList className="stats">
         <li>
           <span className="label">Followers</span>
-          <span className="quantity">{props.stats.followers}</span>
+          <span className="quantity">{ props.stats.followers.toLocaleString()}</span>
         </li>
         <li>
           <span className="label">Views</span>
-          <span className="quantity">{props.stats.views}</span>
+          <span className="quantity">{props.stats.views.toLocaleString()}</span>
         </li>
         <li>
           <span className="label">Likes</span>
-          <span className="quantity">{props.stats.likes}</span>
+          <span className="quantity">{props.stats.likes.toLocaleString()}</span>
         </li>
-      </ul>
-    </div>
+      </StyledList>
+    </StyledProfile>
   );
 };

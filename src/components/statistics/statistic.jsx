@@ -1,18 +1,22 @@
-import { StatList } from "./statList";
+import randomColor from "randomcolor";
+import { StatisticSection, StyledStatList } from './statList.styled'
+import { StatItem } from "./statList";
+
 export const Statistics = props => {
   return (
-    <section className="statistics">
+    <StatisticSection className="statistics">
       <h2 className="title">{props.title}</h2>
 
-      <ul className="stat-list">
+      <StyledStatList className="stat-list">
         {props.stats.map(listElement => (
-          <StatList
+          <StatItem
             key={listElement.id}
             label={listElement.label}
             percentage={listElement.percentage}
+            background={randomColor()}
           />
         ))}
-      </ul>
-    </section>
+      </StyledStatList>
+    </StatisticSection>
   );
 };
